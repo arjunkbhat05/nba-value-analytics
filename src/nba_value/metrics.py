@@ -19,12 +19,19 @@ def efficiency_index(df: pd.DataFrame) -> pd.Series:
 def value_index(df: pd.DataFrame) -> pd.Series:
     """
     Impact per dollar, normalized to 0–100.
+    Handles edge case where all values are equal (avoids divide-by-zero).
     """
     impact = efficiency_index(df)
     per_dollar = impact / df["salary"]
 
-    # normalize
-    return 100 * (per_dollar - per_dollar.min()) / (per_dollar.max() - per_dollar.min())
+    mn = per_dollar.min()
+    mx = per_dollar.max()
+
+    if pd.isna(mn) or pd.isna(mx) or mx == mn:
+        # if we can't scale, just return 0s (or 50s—0 is fine and deterministic)
+        return pd.Series([0.0] * len(df), index=df.index)
+
+    return 100 * (per_dollar - mn) / (mx - mn)
 
 def add_kpis(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
