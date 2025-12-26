@@ -18,6 +18,10 @@ The analysis is designed to support:
 
 All results are reproducible, tested, and automated using modern Python tooling and CI practices.
 
+## Salary-to-Impact Value Rankings
+
+![Salary-to-Impact Value Index](assets/value_index_chart.png)
+
 ---
 
 ## Key Metrics Engineered
