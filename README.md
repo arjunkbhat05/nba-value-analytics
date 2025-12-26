@@ -6,7 +6,7 @@ This project simulates how front offices and analytics teams assess **player val
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 NBA teams operate under strict salary cap constraints, making contract efficiency just as important as raw performance.  
 This project builds an end-to-end analytics pipeline that merges **NBA salary data** with **advanced player performance metrics** to rank players by their **Salary-to-Impact Value Index**.
@@ -20,7 +20,7 @@ All results are reproducible, tested, and automated using modern Python tooling 
 
 ---
 
-## 📊 Key Metrics Engineered
+## Key Metrics Engineered
 
 - **Cost per Win Share**  
   > Salary divided by Win Shares to measure cost efficiency
@@ -37,7 +37,7 @@ All results are reproducible, tested, and automated using modern Python tooling 
 
 ---
 
-## 🛠️ Technical Implementation
+## Technical Implementation
 
 - **Language:** Python
 - **Core Libraries:** pandas, numpy, matplotlib
@@ -49,7 +49,7 @@ All results are reproducible, tested, and automated using modern Python tooling 
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 Clone the repository and run:
 
